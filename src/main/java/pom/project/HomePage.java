@@ -33,6 +33,8 @@ public class HomePage extends BasePage {
     WebElement buyItNow;
     @FindBy(xpath = "//a[@id='tab-panel-0-w5-w0-atcBtn']")
     WebElement viewCart;
+    @FindBy(xpath = "//h1[@class='main-title']")
+    WebElement validationStringElement;
 
 //Method for Homepage
 
@@ -62,6 +64,9 @@ public class HomePage extends BasePage {
 
         clickOnElement(viewCart);
         System.out.println("viewed cart");
+        String validationString = validationStringElement.getText();
+        Assert.assertEquals(validationString,expectedString);
+        Thread.sleep(2000);
 
     }
 }

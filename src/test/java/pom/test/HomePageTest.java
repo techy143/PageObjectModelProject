@@ -6,13 +6,15 @@ public class HomePageTest extends BaseTest {
 
     @Test(priority = 1)
     public void addToCart() throws InterruptedException {
-        homePage.addToCart("Nikon Camera");
+        homePage.addToCart("Shopping cart (1 item)");
     }
 
     @Test(priority = 2)
     public void checkOut() throws InterruptedException{
 
-        viewCartPage.checkOut("View Shopping cart");
+        viewCartPage.checkOut("Shopping cart (1 item)");
+
+        System.out.println("--------- Validation Passed -------------");
 
     }
 }
